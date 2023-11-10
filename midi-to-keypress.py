@@ -96,7 +96,7 @@ keymap = {
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='OF Generate')
     # MIDI获取 https://www.aigei.com/s?type=midi&dim=jay_chou-pop_music&term=is_vip_false&page=6#resContainer
-    parser.add_argument('-p', '--path', default='qlx-main.mid', type=str)
+    parser.add_argument('-p', '--path', default='yq-main.mid', type=str)
     # parser.add_argument('-l', '--long', default=30, type=int)
     # parser.add_argument('--beat', default=74, type=int)
     parser.add_argument('--iou_mix', default=0.7, type=float)

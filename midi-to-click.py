@@ -95,7 +95,7 @@ keymap = {
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='OF Generate')
     # MIDI获取 https://www.aigei.com/s?type=midi&dim=jay_chou-pop_music&term=is_vip_false&page=6#resContainer
-    parser.add_argument('-p', '--path', default='scg.mid', type=str)
+    parser.add_argument('-p', '--path', default='yq-main.mid', type=str)
     # parser.add_argument('-l', '--long', default=30, type=int)
     # parser.add_argument('--beat', default=74, type=int)
     parser.add_argument('--iou_mix', default=0.7, type=float)
@@ -105,7 +105,7 @@ if __name__ == '__main__':
 
     mid = mido.MidiFile(args.path, clip=True)
     # 主旋律track名称 https://github.com/ryohey/signal -> https://signal.vercel.app/edit
-    note_list = tracks_mix(mid, mid.tracks, 'vocal')
+    note_list = tracks_mix(mid, mid.tracks, 'main')
     note_list = note_overleap_mix(note_list)
     note_list = note_short_rm(note_list)
 
